@@ -1,7 +1,7 @@
 <div align="center">
 
 <picture>
-  <img alt="emilro" src="docs/emilro.png" width="30%" height="30%">
+  <img alt="emilro" src="docs/emil_rtl.png" width="30%" height="30%">
 </picture>
 
 </div>
