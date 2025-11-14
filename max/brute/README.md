@@ -22,4 +22,6 @@ In `brute`
 % mkdir -p build && cd build
 # Compile your executable (called asic-exe)
 % iverilog -s top -g2012 -Wall -Wno-sensitivity-entire-vector -Wno-sensitivity-entire-array -o asic-exe -I ../../../lib/vc -I ../../../lib/sm -I ../../../lib/proc -I ../rtl -I ../tb ../rtl/asic.t.v
+# Run a test case
+% ./asic-exe +verbose=1 +trace=1 +test-case=1
 ```
