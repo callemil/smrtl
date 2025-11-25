@@ -4,7 +4,7 @@ Processor-interfaced matrix multiply units.
 
 ## Variants
 
-### [brute/](brute/)
+### [serial_matmul/](serial_matmul/)
 FSM-based multiply-accumulate with register files. Simple architecture, low throughput.
 
 **Status:** getting there  

@@ -1,18 +1,18 @@
 //=========================================================================
-// max/rtl/AsicCtrl.v
+// max/rtl/serial-matmul-ctrl.v
 //=========================================================================
 // Sebastian Claudiusz Magierowski Feb 16 2023
 //
-// A part of asic.v  (look for some definitions there)
+// A part of serial-matmul.v  (look for some definitions there)
 
-`ifndef ASIC_CTRL_V
-`define ASIC_CTRL_V
+`ifndef SERIAL_MATMUL_CTRL_V
+`define SERIAL_MATMUL_CTRL_V
 
 //========================================================================
-// ASIC Control
+// SERIAL_MATMUL Control
 //========================================================================
 
-module AsicCtrl
+module serial_matmul_ctrl
 (
   input  logic clk,
   input  logic reset,
@@ -259,4 +259,4 @@ module AsicCtrl
 endmodule
 
 
-`endif /* ASIC_CTRL_V */
+`endif /* SERIAL_MATMUL_CTRL_V */

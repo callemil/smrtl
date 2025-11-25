@@ -1,11 +1,11 @@
 //=========================================================================
-// max/rtl/asic.v
+// serial_matmul/rtl/serial-matmul.v
 //=========================================================================
 // Sebastian Claudiusz Magierowski Feb 28 2023
 // To run: see notes in asic-test-harness.v 
 
-`ifndef ASIC
-`define ASIC
+`ifndef SERIAL_MATMUL
+`define SERIAL_MATMUL
 
 `include "vc-trace.v"
 
@@ -25,14 +25,14 @@
 `define R_ENTRIES 16 // entries in R reg file
 `define R_ADDR    $clog2(`R_ENTRIES)
 
-`include "AsicCtrl.v"
-`include "AsicDpath.v"
+`include "serial-matmul-ctrl.v"
+`include "serial-matmul-dpath.v"
 
 //========================================================================
 // ASIC System
 //========================================================================
 
-module asic
+module serial_matmul
 (
   input logic clk,
   input logic reset,
@@ -111,7 +111,7 @@ module asic
   // ASIC Unit Control
   //========================================================================
 
-  AsicCtrl ctrl
+  serial_matmul_ctrl ctrl
   (
     .clk       (clk),
     .reset     (reset),
@@ -158,7 +158,7 @@ module asic
     .resp_ready_i (resp_ready_i)
   );
 
-  AsicDpath dpath 
+  serial_matmul_dpath dpath 
   (
     .clk      (clk),
     .reset    (reset),
@@ -275,4 +275,4 @@ module asic
 
 endmodule
 
-`endif /* ASIC */
+`endif /* SERIAL_MATMUL */

@@ -1,12 +1,11 @@
 //=========================================================================
-// max/rtl/AsicDpath.v
+// max/rtl/serial-matmul-dpath.v
 //=========================================================================
 // Sebastian Claudiusz Magierowski Feb 16 2023
 
-// A part of asic.v  (look for some definitions there)
-
-`ifndef ASIC_DPATH_V
-`define ASIC_DPATH_V
+// A part of serial-matmul.v  (look for some definitions there)
+`ifndef SERIAL_MATMUL_DPATH_V
+`define SERIAL_MATMUL_DPATH_V
 
 `include "sm-bufs.v"
 `include "sm-arithmetic.v"
@@ -15,10 +14,10 @@
 `include "sm-regfiles.v"
 
 //========================================================================
-// ASIC Datapath
+// SERIAL_MATMUL Datapath
 //========================================================================
 
-module AsicDpath
+module serial_matmul_dpath
 (
   input logic clk,
   input logic reset,
@@ -261,4 +260,4 @@ module AsicDpath
 
 endmodule
 
-`endif /* ASIC_DPATH_V */
+`endif /* SERIAL_MATMUL_DPATH_V */

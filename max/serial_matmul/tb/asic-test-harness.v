@@ -6,13 +6,14 @@
 //=========================================================================
 // ASIC Test Harness
 //=========================================================================
-// Notes:
-// Our exectuable has -test suffix, since VC_TEST_SUITE_BEGIN expects this
-// 
-// SRC ---> UNPACK ---> ASIC -> PACK -> SNK
-//                      |  |
-// MEM resp -> UNPACK --+  +--> PACK -> MEM req
-//
+/* Notes:
+ Our exectuable has -test suffix, since VC_TEST_SUITE_BEGIN expects this
+ 
+ SRC ------> UNPACK ---> ASIC ---> PACK -----> SNK
+                         |  |
+ MEM resp -> UNPACK -----'  '----> PACK -> MEM req
+ 
+*/
 
 `include "vc-TestRandDelaySource.v"
 `include "vc-TestRandDelaySink.v"
@@ -288,7 +289,7 @@ module top;
     .src_max_delay  (th_src_max_delay),
     .mem_max_delay  (th_mem_max_delay),
     .sink_max_delay (th_sink_max_delay),
-    .done   (th_done)
+    .done           (th_done)
   );
 
   //----------------------------------------------------------------------

@@ -1,4 +1,4 @@
-# max/brute/tb/Makefile
+# max/serial_matmul/tb/Makefile
 # Sebastian Claudiusz Magierowski Nov 24 2025
 
 SIM      ?= iverilog

@@ -2,23 +2,23 @@
 // RV Instruction Type
 //========================================================================
 // Sebastian Claudiusz Magierowski Feb 11 2023
-
-// Instruction types are similar to message types but are strictly used
-// for communication within a RV-based processor. Instruction
-// "messages" can be unpacked into the various fields as defined by the
-// RV ISA, as well as be constructed from specifying each field
-// explicitly. The 32-bit instruction has different fields depending on
-// the format of the instruction used. The following are the various
-// instruction encoding formats used in the RV ISA.
-//
-//  31          25 24   20 19   15 14    12 11          7 6      0
-// | funct7       | rs2   | rs1   | funct3 | rd          | opcode |  R-type
-// | imm[11:0]            | rs1   | funct3 | rd          | opcode |  I-type, I-imm
-// | imm[11:5]    | rs2   | rs1   | funct3 | imm[4:0]    | opcode |  S-type, S-imm
-// | imm[12|10:5] | rs2   | rs1   | funct3 | imm[4:1|11] | opcode |  SB-type,B-imm
-// | imm[31:12]                            | rd          | opcode |  U-type, U-imm
-// | imm[20|10:1|11|19:12]                 | rd          | opcode |  UJ-type,J-imm
-
+/*
+ Instruction types are similar to message types but are strictly used
+ for communication within a RV-based processor. Instruction
+ "messages" can be unpacked into the various fields as defined by the
+ RV ISA, as well as be constructed from specifying each field
+ explicitly. The 32-bit instruction has different fields depending on
+ the format of the instruction used. The following are the various
+ instruction encoding formats used in the RV ISA.
+ 
+   31          25 24   20 19   15 14    12 11          7 6      0
+  | funct7       | rs2   | rs1   | funct3 | rd          | opcode |  R-type
+  | imm[11:0]            | rs1   | funct3 | rd          | opcode |  I-type, I-imm
+  | imm[11:5]    | rs2   | rs1   | funct3 | imm[4:0]    | opcode |  S-type, S-imm
+  | imm[12|10:5] | rs2   | rs1   | funct3 | imm[4:1|11] | opcode |  SB-type,B-imm
+  | imm[31:12]                            | rd          | opcode |  U-type, U-imm
+  | imm[20|10:1|11|19:12]                 | rd          | opcode |  UJ-type,J-imm
+*/
 `ifndef TINY_RV2_INST_V
 `define TINY_RV2_INST_V
 

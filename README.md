@@ -48,9 +48,9 @@ lib/                 – Reusable IP and verification utilities
     COPYING          – License for the VC library
 
 max/                 – "Machines": concrete SoCs / accelerators + testbenches
-  brute/             – Example accelerator / SoC ("brute" design)
+  serial_matmul/     – Example accelerator / SoC ("serial_matmul" design)
     rtl/             – RTL for the accelerator/system
-      asic.v
+      serial-matmul.v
       AsicCtrl.v
       AsicDpath.v
     tb/              – Test harnesses, test cases, and simulation tops
